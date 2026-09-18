@@ -1,0 +1,373 @@
+:root {
+    --color-primary: #2457d6;
+    --color-primary-dark: #193ca0;
+    --color-text: #172033;
+    --color-background: #f4f5f7;
+    --spacing: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 1rem/1.6 Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: background 200ms, color 200ms;
+}
+
+.container {
+    width: min(100% - 2rem, 1120px);
+    margin-inline: auto;
+}
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #d9dce2;
+    padding-block: 1rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.brand {
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: inline-block;
+    padding: .5rem .9rem;
+    border: 1px solid var(--color-primary);
+    border-radius: .5rem;
+    color: var(--color-primary);
+    background: white;
+    cursor: pointer;
+}
+
+nav#nav-utama {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+nav#nav-utama.nav-open {
+    display: flex;
+}
+
+.nav-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-dark);
+}
+
+.nav-link:focus-visible,
+.brand:focus-visible,
+.nav-toggle:focus-visible,
+.theme-toggle:focus-visible {
+    outline: 3px solid #f4b000;
+    outline-offset: 3px;
+}
+
+.theme-toggle {
+    padding: .5rem .9rem;
+    border: 0;
+    border-radius: .5rem;
+    color: white;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.hero {
+    padding-block: 3rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    align-self: flex-start;
+    padding: .75rem 1.25rem;
+    color: white;
+    background: var(--color-primary);
+    border: 0;
+    border-radius: .5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--color-primary-dark);
+}
+
+.button:focus-visible {
+    outline: 3px solid #f4b000;
+    outline-offset: 3px;
+}
+
+.features {
+    padding-block: 3rem;
+}
+
+.features h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #d9dce2;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+.schedule {
+    padding-block: 3rem;
+    background: white;
+}
+
+.schedule h2 {
+    margin-top: 0;
+}
+
+.schedule label {
+    display: block;
+    margin-bottom: .4rem;
+    font-weight: bold;
+}
+
+.schedule select {
+    padding: .5rem;
+    border-radius: .4rem;
+    border: 1px solid #d9dce2;
+    margin-bottom: 1rem;
+}
+
+#status-kegiatan {
+    color: #555;
+}
+
+.schedule-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.schedule-list li {
+    padding: .9rem 1rem;
+    border: 1px solid #d9dce2;
+    border-radius: .6rem;
+    background: var(--color-background);
+}
+
+.schedule-list time {
+    display: block;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.faq {
+    padding-block: 3rem;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.faq-item h3 {
+    margin: 0;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #d9dce2;
+    border-radius: .6rem;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-question[aria-expanded="true"] {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.faq-answer {
+    margin: .5rem 0 0;
+    padding: 0 1rem;
+    color: #444;
+}
+
+.cta {
+    padding-block: 3rem;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-top: 0;
+}
+
+#form-kontak {
+    max-width: 420px;
+    margin-inline: auto;
+    text-align: left;
+}
+
+#form-kontak label {
+    display: block;
+    margin-bottom: .3rem;
+    font-weight: bold;
+}
+
+#form-kontak input,
+#form-kontak textarea {
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: .3rem;
+    border: 1px solid #d9dce2;
+    border-radius: .4rem;
+    font: inherit;
+}
+
+.error {
+    display: block;
+    min-height: 1.2rem;
+    margin-bottom: .6rem;
+    color: #c0392b;
+}
+
+[aria-invalid="true"] {
+    outline: 2px solid #c0392b;
+}
+
+#status-kontak {
+    color: #1e7d32;
+    font-weight: bold;
+}
+
+.site-footer {
+    text-align: center;
+    padding-block: 1.5rem;
+    color: #555;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    padding: .6rem 1rem;
+    border: 0;
+    border-radius: .5rem;
+    color: white;
+    background: var(--color-primary-dark);
+    cursor: pointer;
+}
+
+body.tema-gelap {
+    --color-text: #e8ebf3;
+    --color-background: #12151f;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+body.tema-gelap .site-header,
+body.tema-gelap .feature-card,
+body.tema-gelap .faq-question,
+body.tema-gelap .nav-toggle {
+    background: #1b1f2c;
+    border-color: #2c3142;
+    color: var(--color-text);
+}
+
+body.tema-gelap .schedule {
+    background: #171b26;
+}
+
+body.tema-gelap .schedule-list li {
+    background: #1b1f2c;
+    border-color: #2c3142;
+}
+
+body.tema-gelap #form-kontak input,
+body.tema-gelap #form-kontak textarea {
+    background: #1b1f2c;
+    color: var(--color-text);
+    border-color: #2c3142;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    nav#nav-utama {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feature-list {
+        flex-direction: row;
+    }
+}

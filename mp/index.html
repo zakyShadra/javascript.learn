@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Kegiatan D3 Teknik Informatika</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="#beranda">Portal Kegiatan D3 TI</a>
+            <button id="toggle-nav" class="nav-toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-utama">
+                Menu
+            </button>
+            <nav id="nav-utama" aria-label="Navigasi utama">
+                <a class="nav-link" href="#manfaat">Manfaat</a>
+                <a class="nav-link" href="#kegiatan">Kegiatan</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+                <a class="nav-link" href="#daftar">Daftar</a>
+            </nav>
+            <button id="toggle-tema" class="theme-toggle" type="button">
+                Tema gelap
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="container hero-content">
+                <h1>Ikuti Kegiatan Kampus, Asah Kemampuan Coding-mu</h1>
+                <p>Portal Kegiatan D3 Teknik Informatika menghimpun lokakarya, workshop, dan
+                    pelatihan singkat untuk membantu mahasiswa belajar web dari dasar.</p>
+                <a class="button" href="#daftar">Lihat Jadwal Kegiatan</a>
+                <img src="assets/lokakarya-web.jpg" alt="Mahasiswa berdiskusi di depan komputer saat lokakarya web">
+            </div>
+        </section>
+
+        <section id="manfaat" class="features">
+            <div class="container">
+                <h2>Kenapa Ikut Kegiatan Ini?</h2>
+                <div class="feature-list">
+                    <article class="feature-card">
+                        <h3>Belajar dari Dasar</h3>
+                        <p>Materi HTML dan CSS disampaikan bertahap agar mudah diikuti pemula.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Code Defense</h3>
+                        <p>Peserta mempresentasikan hasil praktik untuk melatih pemahaman.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Sertifikat Kegiatan</h3>
+                        <p>Bukti keikutsertaan diberikan kepada peserta setelah kegiatan selesai.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kegiatan" class="schedule">
+            <div class="container">
+                <h2>Kegiatan Mendatang</h2>
+
+                <label for="filter-kategori">Filter kategori</label>
+                <select id="filter-kategori">
+                    <option value="semua">Semua kategori</option>
+                    <option value="Lokakarya">Lokakarya</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Seminar">Seminar</option>
+                </select>
+
+                <p id="status-kegiatan" role="status" aria-live="polite"></p>
+                <ul id="daftar-kegiatan" class="schedule-list"></ul>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Pertanyaan Umum</h2>
+                <div class="accordion" id="accordion-faq">
+                    <div class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" id="faq-question-1"
+                                    aria-expanded="false" aria-controls="faq-answer-1">
+                                Apakah kegiatan ini gratis?
+                            </button>
+                        </h3>
+                        <p class="faq-answer" id="faq-answer-1" hidden>
+                            Ya, seluruh kegiatan pada portal ini tidak dipungut biaya untuk mahasiswa D3 Teknik
+                            Informatika.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" id="faq-question-2"
+                                    aria-expanded="false" aria-controls="faq-answer-2">
+                                Apakah kegiatan cocok untuk pemula?
+                            </button>
+                        </h3>
+                        <p class="faq-answer" id="faq-answer-2" hidden>
+                            Cocok. Materi disampaikan bertahap dari dasar, jadi peserta tanpa pengalaman sebelumnya
+                            tetap dapat mengikuti.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" id="faq-question-3"
+                                    aria-expanded="false" aria-controls="faq-answer-3">
+                                Bagaimana cara mendaftar?
+                            </button>
+                        </h3>
+                        <p class="faq-answer" id="faq-answer-3" hidden>
+                            Isi form pada bagian "Siap Bergabung?" di bawah, lalu tim panitia akan mengirim informasi
+                            lanjutan melalui email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="daftar" class="cta">
+            <div class="container">
+                <h2>Siap Bergabung?</h2>
+                <p>Daftarkan dirimu untuk mendapatkan info kegiatan terbaru dari kami.</p>
+
+                <form id="form-kontak" novalidate>
+                    <label for="nama-kontak">Nama</label>
+                    <input id="nama-kontak" name="nama" autocomplete="name"
+                           aria-describedby="error-nama-kontak" required>
+                    <small id="error-nama-kontak" class="error"></small>
+
+                    <label for="email-kontak">Email</label>
+                    <input id="email-kontak" name="email" type="email" autocomplete="email"
+                           aria-describedby="error-email-kontak" required>
+                    <small id="error-email-kontak" class="error"></small>
+
+                    <label for="pesan-kontak">Pesan</label>
+                    <textarea id="pesan-kontak" name="pesan" rows="3"
+                              aria-describedby="error-pesan-kontak" required></textarea>
+                    <small id="error-pesan-kontak" class="error"></small>
+
+                    <button class="button" type="submit">Daftar Sekarang</button>
+                    <p id="status-kontak" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Program Studi D3 Teknik Informatika</p>
+        </div>
+    </footer>
+
+    <button id="kembali-atas" class="back-to-top" type="button" hidden>
+        Kembali ke atas
+    </button>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

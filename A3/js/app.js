@@ -1,24 +1,34 @@
-"use strict";
-const tombolMuat = document.querySelector("#muat-data");
-const status = document.querySelector("#status");
-const daftarFitur = document.querySelector("#daftar-fitur");
-function tampilkanState(state, pesan) {
-  status.dataset.state = state;
-  status.textContent = pesan;
+'use strict';
+
+const form = document.querySelector('#form-hitung');
+const hargaInput = document.querySelector('#harga');
+const jumlahInput = document.querySelector('#jumlah');
+const hasil = document.querySelector('#hasil');
+const pesan = document.querySelector('#pesan');
+
+function hitungTotal(harga, jumlah) {
+  return harga * jumlah;
 }
-function buatKartu(item) {
-  const article = document.createElement("article");
-  const heading = document.createElement("h2");
-  const description = document.createElement("p");
-  article.classList.add("feature-card");
-  heading.textContent = item.judul;
-  description.textContent = item.deskripsi;
-  article.append(heading, description);
-  return article;
+
+function tampilkanPesan(teks) {
+  pesan.textContent = teks;
 }
-function renderFitur(items) {
-  daftarFitur.textContent = "";
-  for (const item of items) {
-    daftarFitur.append(buatKartu(item));
+
+function prosesForm(event) {
+  console.count('prosesForm');
+  event.preventDefault();
+
+  const harga = Number(hargaInput.value);
+  const jumlah = Number(jumlahInput.value);
+
+  if (harga <= 0 || jumlah <= 0) {
+    tampilkanPesan('Harga dan jumlah harus positif.');
+    return;
   }
+
+  const total = hitungTotal(harga, jumlah);
+  hasil.textContent = total.toLocaleString('id-ID');
+  tampilkanPesan('Perhitungan berhasil.');
 }
+
+form.addEventListener('submit', prosesForm);

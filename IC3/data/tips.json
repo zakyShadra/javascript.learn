@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "tips": "Tulis prediksi sebelum menjalankan kode agar kamu tahu seberapa dalam pemahamanmu."
+  },
+  {
+    "id": 2,
+    "tips": "Baca pesan error dari baris pertama, jangan langsung menghapusnya."
+  },
+  {
+    "id": 3,
+    "tips": "Pisahkan function logika dari function yang mengubah tampilan."
+  },
+  {
+    "id": 4,
+    "tips": "Gunakan console.table untuk membandingkan banyak kasus uji sekaligus."
+  },
+  {
+    "id": 5,
+    "tips": "Selalu periksa response.ok sebelum memanggil response.json()."
+  }
+]

@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+.container {
+  width: min(90%, 600px);
+  margin-inline: auto;
+  padding-block: 48px;
+}
+
+button {
+  margin: 8px 8px 16px 0;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.status {
+  padding: 10px 0;
+}
+
+.status[data-state="loading"] {
+  color: #d97706;
+}
+
+.status[data-state="success"] {
+  color: #16a34a;
+}
+
+.status[data-state="empty"],
+.status[data-state="error"] {
+  color: #dc2626;
+}
+
+.tips {
+  padding: 16px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}

@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+  transition: background 200ms, color 200ms;
+}
+
+.container {
+  width: min(92%, 640px);
+  margin-inline: auto;
+  padding-block: 48px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+.kartu {
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.kartu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#detail-profil {
+  margin-top: 12px;
+  color: #374151;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.skill-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.skill-list button {
+  padding: 2px 8px;
+  background: #b91c1c;
+}
+
+#form-skill {
+  margin-top: 16px;
+}
+
+#form-skill label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+#form-skill input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.error {
+  display: block;
+  min-height: 18px;
+  color: #b91c1c;
+}
+
+body.tema-gelap {
+  color: #f9fafb;
+  background: #111827;
+}
+
+body.tema-gelap .kartu {
+  background: #1f2937;
+}
+
+body.tema-gelap .skill-list li {
+  background: #374151;
+}

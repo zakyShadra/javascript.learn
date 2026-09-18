@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Independent Challenge 2 - FAQ Accordion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>FAQ Accordion</h1>
+
+    <div class="accordion" id="accordion-faq">
+      <div class="faq-item">
+        <h2>
+          <button class="faq-question" type="button" id="faq-question-1"
+                  aria-expanded="false" aria-controls="faq-answer-1">
+            Apa itu event listener?
+          </button>
+        </h2>
+        <p class="faq-answer" id="faq-answer-1" hidden>
+          Event listener adalah function yang dijalankan browser ketika event tertentu terjadi
+          pada elemen, misalnya klik pada tombol.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>
+          <button class="faq-question" type="button" id="faq-question-2"
+                  aria-expanded="false" aria-controls="faq-answer-2">
+            Mengapa harus memakai addEventListener?
+          </button>
+        </h2>
+        <p class="faq-answer" id="faq-answer-2" hidden>
+          addEventListener memisahkan JavaScript dari HTML sehingga struktur, tampilan, dan
+          perilaku tetap terpisah dan lebih mudah dirawat.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h2>
+          <button class="faq-question" type="button" id="faq-question-3"
+                  aria-expanded="false" aria-controls="faq-answer-3">
+            Apa fungsi aria-expanded?
+          </button>
+        </h2>
+        <p class="faq-answer" id="faq-answer-3" hidden>
+          aria-expanded memberi tahu teknologi bantu bahwa suatu konten sedang terbuka atau
+          tertutup, sehingga akordion tetap dapat diakses.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
